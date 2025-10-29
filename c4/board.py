@@ -13,6 +13,17 @@ def column_is_full(board: list[list[str]], col: int) -> bool:
             return False
     return True
 
+def drop_disc(board: list[list[str]], col: int, mark: str) -> tuple[int, int] | None:
+    depth = len(board)
+    if not column_is_full(board, col):
+        for i in range(depth):
+            if board[depth - 1 - i][col] == "_":
+                board[depth - 1 - i][col] = mark
+                return i, col
+    return None
+
+
+
 
 
 
