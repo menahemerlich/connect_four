@@ -22,6 +22,14 @@ def drop_disc(board: list[list[str]], col: int, mark: str) -> tuple[int, int] | 
                 return i, col
     return None
 
+def legal_moves(board: list[list[str]]) -> list[int]:
+    pass
+
+def render(board: list[list[str]], one_based_cols: bool = True) -> None:
+    for i in board:
+        for j in i:
+            print(j, end=" ")
+        print()
 
 
 
