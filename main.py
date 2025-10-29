@@ -1,5 +1,5 @@
 from c4.board import create_board, column_is_full, drop_disc, render
-from c4.rules import in_bounds, has_winner_from
+from c4.rules import in_bounds, has_winner_from, has_winner,is_full
 
 board = create_board()
 (drop_disc(board, 2, "x"))
@@ -22,5 +22,8 @@ render(board)
 print(in_bounds(board, 6))
 # print(balanced_test(board, 6, ))
 # print(vertical_test(board, 2, ))
-print(has_winner_from(board, 5, 2))
+print(is_full(board))
+
+
+
 
