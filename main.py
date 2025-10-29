@@ -1,4 +1,5 @@
 from c4.board import create_board, column_is_full, drop_disc, render
+from c4.rules import in_bounds
 
 board = create_board()
 
@@ -11,5 +12,6 @@ for i in board:
     for j in i:
         print(j, end=" ")
     print()
+print(in_bounds(board, 6))
 
 
